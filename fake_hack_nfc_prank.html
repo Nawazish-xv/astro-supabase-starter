@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Breach</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 20px;
+      animation: flicker 1s infinite;
+    }
+    @keyframes flicker {
+      0% {opacity: 1;}
+      50% {opacity: 0.8;}
+      100% {opacity: 1;}
+    }
+    #terminal {
+      white-space: pre-line;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal">
+    Initiating connection...\n
+    Connecting to device...\n
+    Accessing camera...\n
+    Access granted ✅\n
+    Fetching recent messages...\n
+    🧠 AI system activated: Analyzing user behavior...\n
+    SYSTEM BREACH DETECTED ❗️\n
+    [WARNING] Your device is now being monitored 👁️\n
+    . . .\n
+    Just kidding. 😄 This is a harmless prank made by Nawazish.
+  </div>
+  <script>
+    let lines = document.getElementById("terminal").innerText.split("\\n");
+    let i = 0;
+    document.getElementById("terminal").innerText = "";
+    function showLine() {
+      if (i < lines.length) {
+        document.getElementById("terminal").innerText += lines[i] + "\\n";
+        i++;
+        setTimeout(showLine, 700);
+      }
+    }
+    showLine();
+  </script>
+</body>
+</html>
